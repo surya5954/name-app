@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Sound Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Name Sound Analyzer</h1>
+            <p class="subtitle">Analyze the sound qualities and characteristics of human names using computational linguistics principles</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section card">
+                <div class="card__body">
+                    <div class="form-group">
+                        <label for="nameInput" class="form-label">Enter a name to analyze:</label>
+                        <div class="input-controls">
+                            <input 
+                                type="text" 
+                                id="nameInput" 
+                                class="form-control" 
+                                placeholder="e.g., Daksh Anand or Atharv"
+                                autocomplete="off"
+                            >
+                            <div class="button-group">
+                                <button id="analyzeBtn" class="btn btn--primary">Analyze</button>
+                                <button id="clearBtn" class="btn btn--secondary">Clear All</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Current Analysis Display -->
+            <section id="currentAnalysis" class="current-analysis hidden">
+                <div class="card">
+                    <div class="card__header">
+                        <h3 id="currentNameTitle">Analysis Results</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="analysis-grid" id="analysisGrid">
+                            <!-- Analysis parameters will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Table Section -->
+            <section class="results-section">
+                <div class="section-header">
+                    <h2>Analysis History</h2>
+                    <div class="table-controls">
+                        <select id="sortSelect" class="form-control">
+                            <option value="name">Sort by Name</option>
+                            <option value="syllable_structure">Sort by Syllable Structure</option>
+                            <option value="phonetic_texture">Sort by Phonetic Texture</option>
+                            <option value="rhythm_flow">Sort by Rhythm & Flow</option>
+                            <option value="musicality">Sort by Musicality</option>
+                            <option value="spectral_features">Sort by Spectral Features</option>
+                            <option value="distinctiveness">Sort by Distinctiveness</option>
+                            <option value="average">Sort by Average Score</option>
+                        </select>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="form-control" 
+                            placeholder="Search names..."
+                        >
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="resultsTable" class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th class="tooltip-header">
+                                    Syllable Structure
+                                    <span class="tooltip">Analysis of syllable count, patterns, and rhythmic structure</span>
+                                </th>
+                                <th class="tooltip-header">
+                                    Phonetic Texture
+                                    <span class="tooltip">Examination of consonant clusters, vowel patterns, and articulation features</span>
+                                </th>
+                                <th class="tooltip-header">
+                                    Rhythm & Flow
+                                    <span class="tooltip">Assessment of syllable transitions, stress patterns, and overall flow</span>
+                                </th>
+                                <th class="tooltip-header">
+                                    Musicality
+                                    <span class="tooltip">Measurement of melodiousness and harmony in sound patterns</span>
+                                </th>
+                                <th class="tooltip-header">
+                                    Spectral Features
+                                    <span class="tooltip">Conceptual analysis of brightness, softness, and tonal qualities</span>
+                                </th>
+                                <th class="tooltip-header">
+                                    Distinctiveness
+                                    <span class="tooltip">Evaluation of uniqueness, memorability, and standout characteristics</span>
+                                </th>
+                                <th>Average</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Results will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="emptyState" class="empty-state">
+                    <p>No names analyzed yet. Enter a name above to get started!</p>
+                </div>
+            </section>
+
+            <!-- Help Section -->
+            <section class="help-section card">
+                <div class="card__header">
+                    <h3>How It Works</h3>
+                </div>
+                <div class="card__body">
+                    <div class="help-grid">
+                        <div class="help-item">
+                            <h4>Syllable Structure</h4>
+                            <p>Analyzes the number and pattern of syllables, evaluating rhythmic complexity and flow.</p>
+                        </div>
+                        <div class="help-item">
+                            <h4>Phonetic Texture</h4>
+                            <p>Examines consonant clusters, vowel patterns, and the smoothness of articulation.</p>
+                        </div>
+                        <div class="help-item">
+                            <h4>Rhythm & Flow</h4>
+                            <p>Assesses how syllables transition and the overall rhythmic quality of the name.</p>
+                        </div>
+                        <div class="help-item">
+                            <h4>Musicality</h4>
+                            <p>Measures the melodic and harmonic qualities based on vowel distribution and sound patterns.</p>
+                        </div>
+                        <div class="help-item">
+                            <h4>Spectral Features</h4>
+                            <p>Conceptually analyzes the brightness and tonal characteristics of the sounds.</p>
+                        </div>
+                        <div class="help-item">
+                            <h4>Distinctiveness</h4>
+                            <p>Evaluates how unique and memorable the name sounds compared to common patterns.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
