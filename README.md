@@ -25,32 +25,32 @@ A sophisticated name analysis tool that evaluates names based on their phonetic,
 1. Clone the repository:
    ```bash
    git clone https://github.com/surya5954/name-app.git
-   cd name-app
-   ```
+# Name App
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+## Structure
 
-3. Start the server:
-   ```bash
-   npm start
-   ```
-
-4. Open your browser and navigate to:
-   ```
-   http://localhost:3000
-   ```
+- `backend/` - All backend logic and API endpoints
+- `frontend/` - All frontend code and UI logic
 
 ## Usage
 
-1. Enter a name in the input field
-2. Click "Analyze" or press Enter
-3. View the detailed analysis results including:
-   - Overall score
-   - Individual component scores
-   - Detailed breakdowns of each analysis aspect
+1. Install dependencies in both `backend` and `frontend` folders:
+   ```bash
+   cd backend && npm install
+   cd ../frontend && npm install
+   ```
+2. Start the backend server:
+   ```bash
+   cd backend && npm start
+   ```
+3. Start the frontend app:
+   ```bash
+   cd frontend && npm start
+   ```
+
+## Notes
+- All main logic is now in the `backend` and `frontend` folders.
+- Root-level files (`analyzer.js`, `app.js`, `index.html`, `server.js`, `style.css`, `ui.js`) have been removed.
 
 ## Analysis Components
 
